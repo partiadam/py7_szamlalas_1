@@ -5,14 +5,9 @@ Készíts egy programot, amely [1;10] intervallumon generál 5 darab véletlen e
 
 
 import random
-lista = []
-paroslista = []
-for i in range(5):
-    veletlen = random.randint(1, 10)
-    lista.append(veletlen)
 
-for i in lista:
-    if i % 2 == 0:
-        paroslista.append(i)
+lista = [random.randint(1, 10) for i in range(5)]
 
+
+paroslista = [i for i in lista if i  % 2 == 0]
 print(f"Számok összege: {len(paroslista)} , páros számok: {paroslista}")
